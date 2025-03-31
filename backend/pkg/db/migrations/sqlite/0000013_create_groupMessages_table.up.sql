@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS groupMessage (
+		id INTEGER PRIMARY KEY,
+		sender_id INT,
+		group_id INT, 
+		content TEXT,
+		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+		FOREIGN KEY (sender_id) REFERENCES user(id) ON DELETE CASCADE,
+		FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE
+	);

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS comment_dislike (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		entries_id INTEGER NOT NULL,
+		author_id INTEGER NOT NULL,
+		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+		FOREIGN KEY (entries_id) REFERENCES comments(id),
+		FOREIGN KEY (author_id) REFERENCES user(id)
+	);

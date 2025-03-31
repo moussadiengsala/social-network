@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS groups (
+		id INTEGER PRIMARY KEY,
+		title TEXT NOT NULL,
+		description TEXT NOT NULL,
+		author_id INTEGER NOT NULL,
+		cover TEXT,
+		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+		FOREIGN KEY (author_id) REFERENCES user(id) ON DELETE CASCADE
+);

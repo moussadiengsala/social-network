@@ -1,0 +1,7 @@
+POST http://localhost:your_port/auth/signin
+Content-Type: application/json
+
+{
+  "username": "your_username",
+  "password": "your_password"
+}

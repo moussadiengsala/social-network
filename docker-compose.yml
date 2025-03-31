@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:8000
+    command: [ "npm", "start"]
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
