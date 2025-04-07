@@ -39,7 +39,6 @@ type ResponseWS struct {
 }
 
 func GetPayload(r *http.Request, hub socket.Hub, userID int, response *lib.Response) (ResponseWS, error) {
-
 	var users, groups string
 	var unreadNotifications int
 	var result ResponseWS
